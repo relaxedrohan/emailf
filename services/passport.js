@@ -10,7 +10,7 @@ passport.serializeUser((user, done)=>{
 });
 
 passport.deserializeUser((id, done)=>{
-	User.findbyId(id).then(user=>{
+	User.findById(id).then(user=>{
 		done(null, user);
 	});
 });
@@ -23,7 +23,7 @@ passport.use(
 			callbackURL : '/auth/google/callback'
 		}, 
 		(accessToken, refreshToken, profile, done) => {
-			user.findOne({ googleID: profile.id})
+			User.findOne({ googleID: profile.id})
 			.then((existingUser)=> {
 				if (existingUser){
 					done(null, existingUser);
