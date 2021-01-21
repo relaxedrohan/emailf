@@ -1,0 +1,122 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu&display=swap");
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: Ubuntu, sans-serif;
+}
+.main_div {
+  width: 100%;
+  height: 100vh;
+  background: #d5e6e5;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+.center_div {
+  width: 25%;
+  height: 80vh;
+  background-color: #d4faf0;
+  box-shadow: 5px 5px 25px -5px #fcfcfc;
+  border-radius: 15px;
+}
+
+h1 {
+  color: white;
+  background: transparent;
+  background-color: #de746d;
+  padding: 6px 0px 2px 0px;
+  margin-bottom: 10px;
+}
+
+input {
+  text-align: center;
+  height: 30px;
+  top: 10px;
+  border: none;
+  background: transparent;
+  font-size: 20px;
+  font-weight: 500px;
+}
+
+button {
+  min-height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  border-color: black;
+  color: #b55959;
+  background-color: #c4b7f7;
+  font-size: 30px;
+  outline: none;
+  border: none;
+  margin-left: 10px;
+  box-shadow: 5px 5px 15px -5px #de746d;
+}
+
+button:hover {
+  background-color: #21611c;
+}
+
+ol {
+  margin-top: 30px;
+}
+
+ol li {
+  padding-left: 50px;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 400px;
+  min-height: 40px;
+  display: flex;
+  align-items: center;
+  color: #fab605;
+  text-transform: capitalize;
+}
+
+.todo_style {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  align-items: center;
+}
+
+.todo_style .fa-times {
+  width: 20px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #b00d07;
+  border-radius: 50%;
+  margin: 0 15px 0 35px;
+  color: aliceblue;
+  box-shadow: 5px 5px 15px -5px #120d26;
+}
+
+.todo_style .fa-times:hover {
+  background-color: crimson;
+}
+.todo_style .fa-times:hover .list_style {
+  background-color: crimson;
+}
+@media (max-width: 768px) {
+  .center_div {
+    width: 55%;
+  }
+  .todo_style .fa-times {
+    margin: 0 15px 0 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  button {
+    margin-left: 5px;
+    min-height: 40px;
+    width: 40px;
+    color: white;
+    font-size: 30px;
+  }
+}
