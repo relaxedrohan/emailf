@@ -5,10 +5,11 @@ import { Provider } from 'react-redux';
 import { createStore, applyMiddleware } from 'redux';
 import reduxThunk from 'redux-thunk';
 
-
-
 import App from './components/App';
 import reducers from './reducers';
+
+//import axios from 'axios';
+//window.axios = axios;   //to inspect post request
 
 const store = createStore ( reducers , {}, applyMiddleware(reduxThunk));
 

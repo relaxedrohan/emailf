@@ -7,6 +7,7 @@ const bodyParser = require('body-parser');
 
 
 require('./models/User');
+require('./models/Survey');
 require('./services/passport');
 
 mongoose.connect(keys.mongoURI, {useNewUrlParser: true, useUnifiedTopology: true });
@@ -29,6 +30,7 @@ app.use(passport.session());
 
 require('./routes/authRoutes')(app);
 require('./routes/billingRoutes')(app);
+require('./routes/surveysRoutes')(app);
 
 if(process.env.NODE_ENV ===  'production'){
 
