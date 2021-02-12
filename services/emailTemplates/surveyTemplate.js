@@ -1,3 +1,22 @@
+const keys = require('../../config/keys');
+
 module.exports = (survey)=>{
-    return'<div>' + survey.body + '</div>';
+    return `
+        <html>
+            <body>
+                <div style="text-align:center;">
+                    <h1>I'd love your Feedback</h1>
+                    <p>Please Click one of the following button</p>
+                    <p>${survey.body}</p>
+                    <div>
+                        <a href="${keys.feedbackRedirect}/api/surveys/thanks">Yes</a>
+                    </div>
+                    <div>
+                        <a href=${keys.feedbackRedirect}/api/surveys/thanks">No</a>
+                    </div>
+                </div>
+            </body>
+        </html>
+
+    `;
 };
