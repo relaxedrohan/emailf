@@ -1,11 +1,12 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
+import SurveyList from './surveys/SurveyList';
 
 const Dashboard = ()=>{
     return(
         <div>
-            Dashboard
-            <div className="fixed-action-btn">
+            <SurveyList/>
+            <div className="fixed-action-btn right" >
             <Link to="/surveys/new" class="btn-floating btn-large red">
                 <i class="material-icons">add</i>
             </Link>

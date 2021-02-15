@@ -9,10 +9,10 @@ module.exports = (survey)=>{
                     <p>Please Click one of the following button</p>
                     <p>${survey.body}</p>
                     <div>
-                        <a href="${keys.feedbackRedirect}/api/surveys/thanks">Yes</a>
+                        <a href="${keys.feedbackRedirect}/api/surveys/${survey.id}/yes">Yes</a>
                     </div>
                     <div>
-                        <a href=${keys.feedbackRedirect}/api/surveys/thanks">No</a>
+                        <a href="${keys.feedbackRedirect}/api/surveys/${survey.id}/no">No</a>
                     </div>
                 </div>
             </body>
